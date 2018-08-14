@@ -22,7 +22,7 @@ const options = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'public/index.tpl.html',
+      template: 'app/public/index.tpl.html',
       inject: 'body',
       filename: 'index.html'
     }),
