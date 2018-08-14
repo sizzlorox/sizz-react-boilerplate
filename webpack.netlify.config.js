@@ -33,6 +33,8 @@ const options = {
       'process.env.NODE_ENV': JSON.stringify('netlify')
     }),
     new webpack.ProvidePlugin({
+      React: 'react',
+      ReactDOM: 'react-dom',
       classnames: 'classnames'
     }),
   ],
