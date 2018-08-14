@@ -1,0 +1,24 @@
+@import 'meyer-reset';
+@mixin mobile ($size: 640px) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+#app {
+    // Palette
+    // Black    |    Navy    |    Pink    |    Red     |    Gray
+    // #000000  |  #062F4F   |  #813772   |  #B82601   |  #4C4C4C
+    // Components
+    @import 'components/header/header';
+    @import 'components/nav-bar/navbar';
+    @import 'components/card/card';
+    .content {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
+    }
+}

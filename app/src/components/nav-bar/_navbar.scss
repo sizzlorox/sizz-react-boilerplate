@@ -1,0 +1,20 @@
+.nav-bar {
+    padding: 0.75em;
+    background-color: #062F4F;
+    ul {
+        text-align: center;
+        a {
+            margin-left: 0.50em;
+            margin-right: 0.50em;
+            padding: 0.35em;
+            color: #ffffff;
+            text-decoration: none;
+            &.is-active {
+                background-color: #813772;
+            }
+            &:hover {
+                background-color: #4C4C4C;
+            }
+        }
+    }
+}
