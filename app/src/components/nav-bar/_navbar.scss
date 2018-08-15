@@ -9,11 +9,14 @@
             padding: 0.35em;
             color: #ffffff;
             text-decoration: none;
+            transition: 600ms;
             &.is-active {
                 background-color: #813772;
             }
             &:hover {
+                // border: 2px solid #ffffff;
                 background-color: #4C4C4C;
+                border-radius: 0.5em;
             }
         }
     }
