@@ -75,12 +75,12 @@ const options = {
           }]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,
+        test: /.(ttf|otf|eot|svg|png|woff(2)?)(\?[a-z0-9]+)?$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              limit: 8192
+              name: '[name].[ext]',
             }
           }
         ]

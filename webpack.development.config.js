@@ -75,23 +75,12 @@ const options = {
           }]
       },
       {
-        test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+        test: /.(ttf|otf|eot|svg|png|woff(2)?)(\?[a-z0-9]+)?$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]'
-            }
-          }
-        ]
-      },
-      {
-        test: /.(svg|png?)(\?[a-z0-9]+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]'
+              name: '[name].[ext]',
             }
           }
         ]
