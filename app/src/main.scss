@@ -20,5 +20,9 @@
         align-items: center;
         flex-wrap: wrap;
         max-width: 1000px;
+        .home-content {
+            margin: 1.25rem;
+            text-align: center;
+        }
     }
 }
