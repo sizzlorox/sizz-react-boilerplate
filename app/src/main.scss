@@ -13,6 +13,7 @@
     @import 'components/header/header';
     @import 'components/nav-bar/navbar';
     @import 'components/card/card';
+    @import 'components/profile/profile';
     .content {
         display: flex;
         margin: 0 auto;
@@ -22,6 +23,9 @@
         max-width: 1000px;
         .home-content {
             margin: 1.25rem;
+            text-align: center;
+        }
+        .profile-content {
             text-align: center;
         }
     }
