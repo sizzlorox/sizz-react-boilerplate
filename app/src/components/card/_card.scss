@@ -1,21 +1,25 @@
 .card {
-    width: calc(33% - 2rem);
-    min-width: calc(33% - 2rem);
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    min-width: 400px;
     height: 400px;
     min-height: 400px;
     perspective: 1000px;
     margin: 1rem;
     position: relative;
-    @include mobile (800px) {
-        width: calc(50% - 2rem);
-    }
     @include mobile (500px) {
         width: 100%;
+        min-height: 200px;
+        max-height: 200px;
     }
     .front,
     .back {
         display: flex;
         border-radius: 6px;
+        @include mobile (500px) {
+            border-radius: 0px;
+        }
         background-position: center;
         background-size: cover;
         text-align: center;
@@ -43,8 +47,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, adjust-hue(hsl(222, 80%, 50%), -20deg), hsl(222, 80%, 50%));
-            opacity: .25;
+            background: #77c9d4;
             z-index: -1;
         }
     }
@@ -55,7 +58,8 @@
         transform: rotateY(-180deg);
     }
     .back {
-        background: #ffffff;
+        background: $background-primary;
+        opacity: .25;
         transform: rotateY(-180deg);
     }
     &:hover .back {
