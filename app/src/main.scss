@@ -12,6 +12,7 @@ $hero-bg-secondary: #015249;
 $sleek-gray: #a5a5af;
 #app {
     // Components
+    @import 'components/loading/loading';
     @import 'components/hero/hero';
     @import 'components/nav-bar/navbar';
     @import 'components/card/card';

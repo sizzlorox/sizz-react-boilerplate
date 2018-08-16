@@ -1,4 +1,4 @@
-export default ({ title, smallTitle }) => {
+export default () => {
   return (
     <section className={classnames('hero')}>
       <div className={classnames('hero-bg')}>
