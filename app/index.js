@@ -11,8 +11,7 @@ ReactDOM.render((
 ), document.getElementById('app'), (err) => console.log(err));
 
 
-if (process.env.NODE_ENV.includes('production')
-  && 'serviceWorker' in navigator
+if ('serviceWorker' in navigator
   && window.location.protocol === 'https:') {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js').then(registration => {
