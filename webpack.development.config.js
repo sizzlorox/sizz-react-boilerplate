@@ -75,7 +75,7 @@ const options = {
           }]
       },
       {
-        test: /.(ttf|otf|eot|svg|png|woff(2)?)(\?[a-z0-9]+)?$/,
+        test: /.(ttf|otf|eot|svg|png|jpeg|woff(2)?)(\?[a-z0-9]+)?$/,
         use: [
           {
             loader: 'file-loader',

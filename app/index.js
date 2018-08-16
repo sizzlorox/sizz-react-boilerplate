@@ -4,16 +4,24 @@ import { BrowserRouter } from 'react-router-dom';
 // Main Component
 import App from './src/App';
 
-// Service Worker
-import registerServiceWorker from './registerServiceWorker';
-
 ReactDOM.render((
   <BrowserRouter>
     <App />
   </BrowserRouter>
 ), document.getElementById('app'), (err) => console.log(err));
 
-registerServiceWorker();
+
+if (process.env.NODE_ENV.includes('production')
+  && 'serviceWorker' in navigator
+  && window.location.protocol === 'https:') {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then(registration => {
+      console.log('SW registered: ', registration);
+    }).catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
+  });
+}
 if (module.hot) {
   module.hot.accept();
 }
