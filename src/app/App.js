@@ -5,6 +5,7 @@ import NavBar from './components/nav-bar/NavBar';
 
 // Views
 import Home from './views/Home';
+import NotFound from './views/NotFound';
 
 // Stateless Main Component with React-Router
 export default () => {
@@ -13,7 +14,7 @@ export default () => {
       <NavBar />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route component={Home} />
+        <Route component={NotFound} />
       </Switch>
     </React.Fragment>
   )

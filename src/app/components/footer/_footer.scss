@@ -1,11 +1,11 @@
 .footer {
+    bottom: 0;
     width: 100%;
     .footer-bg {
         background: #222;
         background-color: $hero-bg-primary;
         height: auto;
         clear: both;
-        margin-top: 200px;
         background-size: cover;
     }
     .footer-content {

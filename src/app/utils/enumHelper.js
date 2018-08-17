@@ -6,8 +6,8 @@ export default {
     },
 
     {
-      name: 'Page not found',
-      path: '/somepage'
+      name: 'About',
+      path: '/about'
     }
   ],
 

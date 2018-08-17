@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import enumHelper from '../../utils/enumHelper';
 
 export default () => {
@@ -11,8 +11,8 @@ export default () => {
             <hr />
             <ul>
               {enumHelper.views.map((view, index) => (
-                <li>
-                  <NavLink key={index} exact to={view.path}>{view.name}</NavLink>
+                <li key={index}>
+                  <Link to={view.path}>{view.name}</Link>
                 </li>
               ))}
             </ul>

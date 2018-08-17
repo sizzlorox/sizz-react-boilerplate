@@ -10,6 +10,10 @@ $background-secondary: #77c9d4;
 $hero-bg-primary: #57bc90;
 $hero-bg-secondary: #015249;
 $sleek-gray: #a5a5af;
+body {
+    background-color: $background-primary;
+}
+
 #app {
     // Components
     @import 'components/loading/loading';
@@ -24,13 +28,28 @@ $sleek-gray: #a5a5af;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        background-color: $background-primary;
+        height: 100%;
         .home-content {
             margin: 1.25rem;
             text-align: center;
         }
         .profile-content {
             text-align: center;
+        }
+        .not-found {
+            width: 100%;
+            height: auto;
+            background-color: $hero-bg-primary;
+            text-align: center;
+            .not-found-btns {
+                margin: 2em;
+                a {
+                    cursor: pointer;
+                }
+            }
+        } // Im so bad with CSS >:C
+        .not-found-body {
+            height: 100%;
         }
     }
 }
