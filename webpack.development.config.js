@@ -11,7 +11,7 @@ const options = {
   target: 'web',
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    path.join(__dirname, 'app/index.js')
+    path.join(__dirname, 'src/index.js')
   ],
 
   output: {
@@ -22,7 +22,7 @@ const options = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'app/public/index.tpl.html',
+      template: 'src/public/index.tpl.html',
       inject: 'body',
       filename: 'index.html'
     }),

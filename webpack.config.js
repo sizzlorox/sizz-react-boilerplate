@@ -13,7 +13,7 @@ const options = {
   target: 'web',
 
   entry: [
-    path.join(__dirname, 'app/index.js')
+    path.join(__dirname, 'src/index.js')
   ],
 
   output: {
@@ -24,7 +24,7 @@ const options = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'app/public/index.tpl.html',
+      template: 'src/public/index.tpl.html',
       inject: 'body',
       filename: 'index.html',
       minify: {

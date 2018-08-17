@@ -1,3 +1,6 @@
+import { NavLink } from 'react-router-dom'
+import enumHelper from '../../utils/enumHelper';
+
 export default () => {
   return (
     <div className={classnames('footer')}>
@@ -7,20 +10,19 @@ export default () => {
             <p>Site Map</p>
             <hr />
             <ul>
-              <li>
-                Home
-              </li>
-              <li>
-                404
-              </li>
+              {enumHelper.views.map((view, index) => (
+                <li>
+                  <NavLink key={index} exact to={view.path}>{view.name}</NavLink>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <p>Contact Us</p>
             <hr />
-            Email: sizzlorox@gmail.com
+            Email: {enumHelper.contacts.email}
             <br />
-            Phone: (XX) XXXX-XXXX
+            Phone: {enumHelper.contacts.phone}
           </div>
         </div>
         <p className={classnames('footer-copyright')}>Copyright © {new Date().getFullYear()} Something something</p>
