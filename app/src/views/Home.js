@@ -2,6 +2,7 @@
 import Hero from '../components/hero/Hero';
 import Card from '../components/card/Card';
 import Profile from '../components/profile/Profile';
+import Footer from '../components/footer/Footer';
 
 class Home extends React.Component {
 
@@ -30,6 +31,7 @@ class Home extends React.Component {
             <h3>Contributors</h3>
             <p>Hopefully people will contribute in the future</p>
           </div>
+          <Footer />
         </section>
       </React.Fragment>
     );
