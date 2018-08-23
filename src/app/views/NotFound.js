@@ -1,7 +1,8 @@
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Components
 import Footer from '../components/footer/Footer';
+import Loading from '../components/loading/Loading';
 
 class NotFound extends React.Component {
 
@@ -23,6 +24,7 @@ class NotFound extends React.Component {
         </div>
         <div className={classnames('not-found-body')}>
           <p>Think of something witty and beautiful to fill up this space!</p>
+          <Loading />
         </div>
         <Footer />
       </section>

@@ -18,7 +18,7 @@ class Home extends React.Component {
           This was made for me to keep a well structured boilerplate for personal use.
           It's intended to keep being updated as I learn more about structuring React Apps.
           I'm trying to get as much knowledge as I can with ReactJS's best practices and applying it here.
-          </div>
+        </div>
         <Card cardTitle='Minimal'>As minimal as can be.</Card>
         <Card cardTitle='Easy'>Made to be easy to change and maintain</Card>
         <Card cardTitle='Practice'>Made for practice!</Card>
