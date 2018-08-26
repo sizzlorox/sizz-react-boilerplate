@@ -3,6 +3,7 @@ import Hero from '../components/hero/Hero';
 import Card from '../components/card/Card';
 import Profile from '../components/profile/Profile';
 import Footer from '../components/footer/Footer';
+import Loading from '../components/loading/Loading';
 
 class Home extends React.Component {
 
