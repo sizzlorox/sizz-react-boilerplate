@@ -69,9 +69,6 @@
       "pre-commit": [
         "npm run test"
       ],
-      "pre-push": [
-        "npm run test"
-      ],
       "post-commit": "git status",
       "post-checkout": "npm install",
       "post-merge": []
