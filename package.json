@@ -22,17 +22,6 @@
     "verbose": true,
     "testURL": "http://localhost/"
   },
-  "pre-git": {
-    "enabled": true,
-    "pre-commit": [
-      "npm run test"
-    ],
-    "pre-push": [
-      "npm run test"
-    ],
-    "post-checkout": "npm install",
-    "post-commit": "git status"
-  },
   "author": "sizzlorox",
   "license": "MIT",
   "devDependencies": {
@@ -75,11 +64,16 @@
   },
   "config": {
     "pre-git": {
+      "enabled": true,
       "commit-msg": "simple",
-      "pre-commit": [],
-      "pre-push": [],
-      "post-commit": [],
-      "post-checkout": [],
+      "pre-commit": [
+        "npm run test"
+      ],
+      "pre-push": [
+        "npm run test"
+      ],
+      "post-commit": "git status",
+      "post-checkout": "npm install",
       "post-merge": []
     }
   }
