@@ -25,7 +25,7 @@
   "pre-git": {
     "enabled": true,
     "pre-commit": [
-      "npm run test"
+      "jest"
     ],
     "post-commit": "git status"
   },
