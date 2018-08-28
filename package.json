@@ -1,8 +1,8 @@
 {
-  "name": "numseq-visualizer-app",
+  "name": "sizz-react-boilerplate",
   "version": "1.0.0",
-  "description": "App in ReactJS w/ Webpack to visualize number sequences",
-  "main": "index.js",
+  "description": "ReatJS Boilerplate",
+  "main": "server.js",
   "scripts": {
     "start": "webpack --config webpack.config.js && cross-env NODE_ENV=production node server",
     "dev": "cross-env NODE_ENV=development node server",
@@ -25,16 +25,16 @@
   "pre-git": {
     "enabled": true,
     "pre-commit": [
-      "jest"
+      "npm run test"
     ],
     "pre-push": [
-      "jest"
+      "npm run test"
     ],
     "post-checkout": "npm install",
     "post-commit": "git status"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "sizzlorox",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
