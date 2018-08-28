@@ -1,6 +1,6 @@
-export default ({ style }) => {
+export default ({ className }) => {
   return (
-    <div className={classnames('loader')} style={style}>
+    <div className={classnames('loader')} className={className}>
     </div>
   );
 };

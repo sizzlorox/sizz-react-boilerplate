@@ -13,6 +13,9 @@
         min-height: 200px;
         max-height: 200px;
     }
+    .placeholder {
+        background: $background-primary;
+    }
     .front,
     .back {
         display: flex;
