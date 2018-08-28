@@ -5,6 +5,7 @@ import Profile from '../components/profile/Profile';
 import Footer from '../components/footer/Footer';
 import Loading from '../components/loading/Loading';
 
+// Setup using ES6 Class because in the future this view may have states
 class Home extends React.Component {
 
   constructor(props) {
@@ -16,9 +17,11 @@ class Home extends React.Component {
       <section className={classnames('content')}>
         <Hero />
         <div className={classnames('home-content')}>
-          This was made for me to keep a well structured boilerplate for personal use.
-          It's intended to keep being updated as I learn more about structuring React Apps.
-          I'm trying to get as much knowledge as I can with ReactJS's best practices and applying it here.
+          <p>
+            This was made for me to keep a well structured boilerplate for personal use.
+            It's intended to keep being updated as I learn more about structuring React Apps.
+            I'm trying to get as much knowledge as I can with ReactJS's best practices and applying it here.
+          </p>
         </div>
         <Card cardTitle='Minimal'>As minimal as can be.</Card>
         <Card cardTitle='Easy'>Made to be easy to change and maintain</Card>

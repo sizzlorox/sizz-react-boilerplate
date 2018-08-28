@@ -1,17 +1,13 @@
-const React = require('react');
+import React from 'react';
 import Enzyme, { shallow, render, mount } from 'enzyme';
-const { expect } = require('chai');
-const sinon = require('sinon');
-const enumHelper = require('./app/utils/enumHelper');
-const Adapter = require('enzyme-adapter-react-16');
+import Adapter from 'enzyme-adapter-react-16';
+import classnames from 'classnames';
 // Needed for fetch
-require('isomorphic-fetch');
+// require('isomorphic-fetch');
 Enzyme.configure({ adapter: new Adapter() });
 
 global.React = React;
 global.shallow = shallow;
 global.render = render;
 global.mount = mount;
-global.expect = expect;
-global.sinon = sinon;
-global.enumHelper = enumHelper;
+global.classnames = classnames;
