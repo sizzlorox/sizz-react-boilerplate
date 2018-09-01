@@ -11,8 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "coverage": "jest --coverage",
-    "webpack-analyze": "webpack --production --json > stats.json",
-    "commit": "commit-wizard"
+    "webpack-analyze": "webpack --production --json > stats.json"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
