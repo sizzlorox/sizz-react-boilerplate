@@ -15,12 +15,12 @@
     "commit": "commit-wizard"
   },
   "jest": {
-    "transform": {
-      ".*": "<rootDir>/node_modules/jest-css-modules"
-    },
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "verbose": true,
-    "testURL": "http://localhost/"
+    "testURL": "http://localhost/",
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|jpeg|ttf|woff|woff2)$": "identity-obj-proxy"
+    }
   },
   "author": "sizzlorox",
   "license": "MIT",
@@ -36,8 +36,10 @@
     "css-loader": "^1.0.0",
     "enzyme": "^3.4.1",
     "enzyme-adapter-react-16": "^1.2.0",
+    "enzyme-to-json": "^3.3.4",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.5.0",
     "jest-css-modules": "^1.1.0",
     "node-sass": "^4.9.3",
@@ -70,8 +72,7 @@
         "npm run test"
       ],
       "post-commit": "git status",
-      "post-checkout": "npm install",
-      "post-merge": []
+      "post-checkout": "npm install"
     }
   }
 }

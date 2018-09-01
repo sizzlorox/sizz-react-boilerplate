@@ -1,3 +1,5 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 // COMPONENTS
 import Hero from '../components/hero/Hero';
 import Card from '../components/card/Card';
@@ -83,6 +85,17 @@ describe('View Home', function () {
     const footerContent = this.wrapper.find(Footer);
     expect(footerContent.exists()).toBe(true);
     expect(footerContent.length).toBe(1);
+  });
+
+  it('Should render correctly', () => {
+    const renderJSON = render((
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={Home} />
+        </Switch>
+      </BrowserRouter>
+    ));
+    expect(toJson(renderJSON)).toMatchSnapshot();
   });
 
 });

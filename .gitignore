@@ -2,6 +2,7 @@
 dist/
 stats.json
 .env
+__snapshots__/
 
 # Logs
 logs

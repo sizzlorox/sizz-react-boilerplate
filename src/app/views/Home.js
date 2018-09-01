@@ -3,7 +3,6 @@ import Hero from '../components/hero/Hero';
 import Card from '../components/card/Card';
 import Profile from '../components/profile/Profile';
 import Footer from '../components/footer/Footer';
-import Loading from '../components/loading/Loading';
 
 // Setup using ES6 Class because in the future this view may have states
 class Home extends React.Component {

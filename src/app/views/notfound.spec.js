@@ -1,5 +1,6 @@
+import { Link, BrowserRouter, Switch, Route } from 'react-router-dom';
+
 // COMPONENTS
-import { Link } from 'react-router-dom';
 import Footer from '../components/footer/Footer';
 
 // VIEWS
@@ -68,6 +69,17 @@ describe.only('View Not Found', function () {
     const footerContent = this.wrapper.find(Footer);
     expect(footerContent.exists()).toBe(true);
     expect(footerContent.length).toBe(1);
+  });
+
+  it('Should render correctly', () => {
+    const renderJSON = render((
+      <BrowserRouter>
+        <Switch>
+          <Route component={NotFound} />
+        </Switch>
+      </BrowserRouter>
+    ));
+    expect(toJson(renderJSON)).toMatchSnapshot();
   });
 
 });
