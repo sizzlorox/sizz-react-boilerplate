@@ -8,7 +8,7 @@ Examples:
   chore(ci): semantic commit without triggering new version
 
 # Lighthouse Report
-![lighthouse report](https://i.imgur.com/Ia1bZdr.png)
+![lighthouse report](https://i.imgur.com/TXHIt6Y.png)
 
 # Requirements
 ```
