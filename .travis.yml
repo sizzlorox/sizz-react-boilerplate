@@ -9,4 +9,6 @@ cache:
   directories:
     - node_modules
 script:
-  - npm test
+  - "jest -u"
+  - "npm run build"
+  - "npm run build:netlify"
