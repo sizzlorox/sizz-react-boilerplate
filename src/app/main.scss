@@ -43,11 +43,18 @@ body {
             text-align: center;
             .not-found-btns {
                 margin: 2em;
+                max-height: 15%;
                 a {
                     cursor: pointer;
                 }
+                button {
+                    border-style: none;
+                    &:hover {
+                        border-bottom: 4px solid $background-primary;
+                    }
+                }
             }
-        } // Im so bad with CSS >:C
+        }
         .not-found-body {
             height: 100%;
         }
