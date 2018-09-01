@@ -8,6 +8,7 @@
     "dev": "cross-env NODE_ENV=development node server",
     "build": "webpack --config webpack.config.js",
     "build:netlify": "webpack --config webpack.netlify.config.js",
+    "lint": "eslint src",
     "test": "jest",
     "test:watch": "jest --watch",
     "coverage": "jest --coverage",
@@ -36,6 +37,11 @@
     "enzyme": "^3.4.1",
     "enzyme-adapter-react-16": "^1.2.0",
     "enzyme-to-json": "^3.3.4",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
@@ -43,7 +49,6 @@
     "jest-css-modules": "^1.1.0",
     "node-sass": "^4.9.3",
     "pre-git": "^3.17.1",
-    "react-lazyload": "^2.3.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
     "uglifyjs-webpack-plugin": "^1.2.7",
@@ -58,7 +63,8 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "react-lazyload": "^2.3.0"
   },
   "release": {
     "analyzeCommits": "simple-commit-message"
@@ -68,6 +74,7 @@
       "enabled": true,
       "commit-msg": "simple",
       "pre-commit": [
+        "npm run lint",
         "npm run test"
       ],
       "post-commit": "git status",

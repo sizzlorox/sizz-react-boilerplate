@@ -28,6 +28,7 @@ npm run dev (Development Environment)
 npm run start (Runs webpack in Express Mode, will be SSR in future)
 npm run build
 npm run build:netlify (Builds to be deployed on netlify, in other words as static page)
+npm run lint (Runs eslint)
 npm run test (Runs jest)
 npm run test:watch
 npm run coverage

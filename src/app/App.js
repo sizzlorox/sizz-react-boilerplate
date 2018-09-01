@@ -8,14 +8,12 @@ import Home from './views/Home';
 import NotFound from './views/NotFound';
 
 // Stateless Main Component with React-Router
-export default () => {
-  return (
-    <React.Fragment>
-      <NavBar />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route component={NotFound} />
-      </Switch>
-    </React.Fragment>
-  )
-};
+export default () => (
+  <React.Fragment>
+    <NavBar />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route component={NotFound} />
+    </Switch>
+  </React.Fragment>
+);

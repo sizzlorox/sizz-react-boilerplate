@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "max-len": [1, 140, 4],
+    "no-undef": 0, // Removed because Webpack is importing React via ProvidePlugins
+    "comma-dangle": 0, // Not using trailing commas
+    "react/react-in-jsx-scope": 0, // Removed because Webpack is importing React via ProvidePlugins
+    "react/jsx-no-undef": 0, // Removed because Webpack is importing React via ProvidePlugins
+    "react/jsx-filename-extension": 0, // We are using .js extensions
+    "react/forbid-prop-types": 0, // Some components children can be any type
+  }
+}

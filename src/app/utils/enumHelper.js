@@ -1,11 +1,13 @@
 export default {
   views: [
     {
+      id: 'home',
       name: 'Home',
       path: '/'
     },
 
     {
+      id: 'about',
       name: 'About',
       path: '/about'
     }

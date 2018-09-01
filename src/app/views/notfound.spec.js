@@ -1,4 +1,14 @@
-import { Link, BrowserRouter, Switch, Route } from 'react-router-dom';
+/*
+  eslint
+  func-names: 0
+*/
+
+import {
+  Link,
+  BrowserRouter,
+  Switch,
+  Route
+} from 'react-router-dom';
 
 // COMPONENTS
 import Footer from '../components/footer/Footer';
@@ -6,8 +16,7 @@ import Footer from '../components/footer/Footer';
 // VIEWS
 import NotFound from './NotFound';
 
-describe.only('View Not Found', function () {
-
+describe('View Not Found', function () {
   beforeEach(() => {
     this.wrapper = shallow(<NotFound history={{ goBack: jest.fn() }} />);
   });
@@ -27,7 +36,7 @@ describe.only('View Not Found', function () {
     const notFoundHeader = notFoundDiv.find('h3');
     expect(notFoundHeader.exists()).toBe(true);
     expect(notFoundHeader.length).toBe(1);
-    expect(notFoundHeader.text()).toEqual(`Don't Panic!`);
+    expect(notFoundHeader.text()).toEqual('Don\'t Panic!');
 
     const notFoundSpan = notFoundDiv.find('span');
     expect(notFoundSpan.exists()).toBe(true);
@@ -48,7 +57,7 @@ describe.only('View Not Found', function () {
     expect(linkButton[0].type).toBe(Link);
     expect(linkButton[0].props.to).toEqual('/');
     expect(linkButton[0].props.children).toEqual('Home');
-    expect(linkButton[1].type).toBe('a');
+    expect(linkButton[1].type).toBe('button');
     // TODO: Make this test better, possibly simulate click as well with mocked result
     expect(linkButton[1].props.onClick).toBeDefined();
     expect(linkButton[1].props.children).toEqual('Back');
@@ -81,5 +90,4 @@ describe.only('View Not Found', function () {
     ));
     expect(toJson(renderJSON)).toMatchSnapshot();
   });
-
 });

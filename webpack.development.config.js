@@ -35,6 +35,7 @@ const options = {
     new webpack.ProvidePlugin({
       React: 'react',
       ReactDOM: 'react-dom',
+      PropTypes: 'prop-types',
       classnames: 'classnames'
     }),
   ],

@@ -1,10 +1,10 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import enumHelper from '../../utils/enumHelper';
 
-export default () => {
-  return (
-    <div className={classnames('nav-bar')}>
-      {enumHelper.views.map((view, index) => <NavLink key={index} className={classnames('link')} exact to={view.path} activeClassName='is-active'>{view.name}</NavLink>)}
-    </div>
-  );
-};
+export default () => (
+  <div className={classnames('nav-bar')}>
+    {enumHelper.views.map(
+      view => <NavLink key={view.id} className={classnames('link')} exact to={view.path} activeClassName="is-active">{view.name}</NavLink>
+    )}
+  </div>
+);

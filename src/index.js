@@ -1,23 +1,20 @@
-require('./app/main.scss');
 import { BrowserRouter } from 'react-router-dom';
 
 // Main Component
 import App from './app/App';
 
+require('./app/main.scss');
+
 ReactDOM.render((
   <BrowserRouter>
     <App />
   </BrowserRouter>
-), document.getElementById('app'), (err) => console.log(err));
-
+), document.getElementById('app'));
 
 if ('serviceWorker' in navigator
   && window.location.protocol === 'https:') {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-      .catch(registrationError => {
-        console.log('SW registration failed: ', registrationError);
-      });
+    navigator.serviceWorker.register('/service-worker.js');
   });
 }
 if (module.hot) {

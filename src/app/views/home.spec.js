@@ -1,3 +1,9 @@
+/*
+  eslint
+  max-len: 0,
+  func-names: 0
+*/
+
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 // COMPONENTS
@@ -10,7 +16,6 @@ import Footer from '../components/footer/Footer';
 import Home from './Home';
 
 describe('View Home', function () {
-
   beforeEach(() => {
     this.wrapper = shallow(<Home />);
   });
@@ -32,7 +37,7 @@ describe('View Home', function () {
     expect(homeContent.exists()).toBe(true);
     expect(homeContent.length).toBe(1);
     expect(homeContent.find('p').length).toBe(1);
-    expect(homeContent.text()).toEqual(`This was made for me to keep a well structured boilerplate for personal use. It's intended to keep being updated as I learn more about structuring React Apps. I'm trying to get as much knowledge as I can with ReactJS's best practices and applying it here.`);
+    expect(homeContent.text()).toEqual('This was made for me to keep a well structured boilerplate for personal use. It\'s intended to keep being updated as I learn more about structuring React Apps. I\'m trying to get as much knowledge as I can with ReactJS\'s best practices and applying it here.');
   });
 
   it('Initialized with Cards', () => {
@@ -91,11 +96,10 @@ describe('View Home', function () {
     const renderJSON = render((
       <BrowserRouter>
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </BrowserRouter>
     ));
     expect(toJson(renderJSON)).toMatchSnapshot();
   });
-
 });
